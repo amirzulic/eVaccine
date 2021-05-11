@@ -7,6 +7,7 @@
     </string>
     <string name="ne">Ne</string>
     <string name="sazetak_podataka_vakcina"></string>
+    <string name="termin_vakcinacije_lokacija">Lokacija</string>
     <string name="da">Da</string>
     <string name="prepreka_tekst">Poštovani Korisniče, \nprilikom prijave naznačeno je da imate prepreku te
     da se ne možete prijaviti za vakcinaciju. Kada steknete uslove za prijavu ponovne posjetite aplikaciju.</string>
@@ -14,6 +15,9 @@
     <string name="izlaz">Izlaz</string>
     <string name="ime">Ime</string>
     <string name="prezime">Prezime</string>
+    <string name="sazetak_pod_vakcina">Vrsta vakcine</string>
+    <string name="idi_na_pocetnu">Početna</string>
+    <string name="dugme_izlaz">Izlaz</string>
     <string name="datum_rodjenja">Datum rođenja</string>
     <string name="jmbg">JMBG</string>
     <string name="br_telefona">Broj telefona</string>

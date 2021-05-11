@@ -50,9 +50,9 @@ class IzborVakcineFragment : Fragment(R.layout.izbor_vakcine) {
             val broj_tel = args.brojTelefona
             val jmbg = args.jmbg
 
-            val action = IzborVakcineFragmentDirections.actionIzborVakcineFragmentToSazetakPodatakaFragment(
-                ime, prezime, datum_rodenja, broj_tel, jmbg, vrstaVakcine, textPrioritetna
 
+            val action = IzborVakcineFragmentDirections.actionIzborVakcineFragmentToSazetakPodatakaFragment(
+                vrstaVakcine, textPrioritetna, ime, prezime, datum_rodenja, broj_tel, jmbg
             )
             findNavController().navigate(action)
 

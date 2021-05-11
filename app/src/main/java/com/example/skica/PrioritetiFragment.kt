@@ -67,9 +67,9 @@ class PrioritetiFragment : Fragment(R.layout.prioriteti) {
             val jmbg = args.jmbg
 
 
-            val action = PrioritetiFragmentDirections.actionPrioritetiFragmentToIzborVakcineFragment(
-                ime, prezime, datum_rodenja, jmbg, broj_tel, textPrioritetna
 
+            val action = PrioritetiFragmentDirections.actionPrioritetiFragmentToIzborVakcineFragment(
+                textPrioritetna, ime, prezime, datum_rodenja, broj_tel, jmbg
             )
             findNavController().navigate(action)
         }

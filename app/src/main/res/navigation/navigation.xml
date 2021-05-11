@@ -51,7 +51,11 @@
         android:id="@+id/kontaktFragment"
         android:name="com.example.skica.KontaktFragment"
         android:label="KontaktFragment"
-        tools:layout="@layout/kontakt"/>
+        tools:layout="@layout/kontakt">
+        <action
+            android:id="@+id/action_kontaktFragment_to_pocetnaFragment"
+            app:destination="@id/pocetnaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/sazetakPodatakaFragment"
         android:name="com.example.skica.SazetakPodatakaFragment"
@@ -78,6 +82,9 @@
         <argument
             android:name="vrsta_vakcine"
             app:argType="string" />
+        <action
+            android:id="@+id/action_sazetakPodatakaFragment_to_terminVakcinacijeFragment"
+            app:destination="@id/terminVakcinacijeFragment" />
     </fragment>
     <fragment
         android:id="@+id/prioritetiFragment"
@@ -134,5 +141,10 @@
     <fragment
         android:id="@+id/terminVakcinacijeFragment"
         android:name="com.example.skica.TerminVakcinacijeFragment"
-        android:label="TerminVakcinacijeFragment" />
+        tools:layout="@layout/termin_vakcinacije"
+        android:label="TerminVakcinacijeFragment" >
+        <action
+            android:id="@+id/action_terminVakcinacijeFragment_to_kontaktFragment"
+            app:destination="@id/kontaktFragment" />
+    </fragment>
 </navigation>

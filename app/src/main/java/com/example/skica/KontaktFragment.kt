@@ -6,15 +6,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.skica.databinding.KontaktBinding
+import kotlin.system.exitProcess
 
-class KontaktFragment : Fragment() {
+class KontaktFragment : Fragment(R.layout.kontakt) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<KontaktBinding>(inflater, R.layout.kontakt, container, false)
+
+        binding.idiNaPocetnu.setOnClickListener{ view: View ->
+            view.findNavController().navigate(R.id.action_kontaktFragment_to_pocetnaFragment)
+        }
+
+        binding.dugmeIzlaz.setOnClickListener{ view: View ->
+            exitProcess(0)
+        }
+
+
+
         return binding.root
     }
 }

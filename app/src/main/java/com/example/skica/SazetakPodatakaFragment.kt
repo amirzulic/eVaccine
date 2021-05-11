@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.skica.databinding.ProvjeraPreprekeBinding
 import com.example.skica.databinding.SazetakPodatakaBinding
@@ -25,16 +26,26 @@ class SazetakPodatakaFragment : Fragment(R.layout.sazetak_podataka) {
         sazetak_podataka_telefon.text = args.brojTelefona
         sazetak_podataka_ime_prezime2.text = args.jmbg
         sazetak_pod_vakcina.text = args.vrstaVakcine
-        
-        
 
 
-
+        goToTerminFromIzbor()
 
 
 
 
     }
+
+    private fun goToTerminFromIzbor(){
+        sazetak_podataka_dugme_dalje.setOnClickListener {
+            val action = SazetakPodatakaFragmentDirections.actionSazetakPodatakaFragmentToTerminVakcinacijeFragment()
+            findNavController().navigate(action)
+        }
+    }
+
+
+
+
+
 
 
 
