@@ -22,6 +22,14 @@ class PocetnaFragment : Fragment() {
                 .navigate(R.id.action_pocetnaFragment_to_provjeraPreprekeFragment)
         }
 
+        binding.pocetnaDugmeBa.setOnClickListener{ view: View ->
+            binding.pocetnaNaslov.setText("Dobro došli \nZapočnite sa prijavom")
+        }
+
+        binding.pocetnaDugmeUs.setOnClickListener{ view: View ->
+            binding.pocetnaNaslov.setText("Welcome \nStart your registration")
+        }
+
         setHasOptionsMenu(true)
 
         return binding.root

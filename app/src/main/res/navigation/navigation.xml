@@ -12,8 +12,7 @@
         tools:layout="@layout/pocetna" >
         <action
             android:id="@+id/action_pocetnaFragment_to_provjeraPreprekeFragment"
-            app:destination="@id/provjeraPreprekeFragment"
-            app:popUpTo="@id/pocetnaFragment" />
+            app:destination="@id/provjeraPreprekeFragment" />
     </fragment>
     <fragment
         android:id="@+id/provjeraPreprekeFragment"
@@ -74,9 +73,6 @@
             android:name="jmbg"
             app:argType="string" />
         <argument
-            android:name="stisnutRadio"
-            app:argType="string" />
-        <argument
             android:name="broj_telefona"
             app:argType="string" />
         <argument
@@ -130,9 +126,6 @@
             app:argType="string" />
         <argument
             android:name="jmbg"
-            app:argType="string" />
-        <argument
-            android:name="prioritetna_grupa"
             app:argType="string" />
         <action
             android:id="@+id/action_izborVakcineFragment_to_sazetakPodatakaFragment"

@@ -12,20 +12,28 @@ import com.example.skica.databinding.ProvjeraPreprekeBinding
 import com.example.skica.databinding.SazetakPodatakaBinding
 import kotlinx.android.synthetic.main.sazetak_podataka.*
 
-class SazetakPodatakaFragment : Fragment(R.layout.sazetak_podataka) {
+class  SazetakPodatakaFragment : Fragment(R.layout.sazetak_podataka) {
 
     private val args: SazetakPodatakaFragmentArgs by navArgs()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
-        sazetak_podataka_ime_prezime.text = args.ime
-        sazetak_podataka_jmbg.text = args.prezime
-        sazetak_podataka_godine.text = args.datumRodenja
-        sazetak_podataka_telefon.text = args.brojTelefona
-        sazetak_podataka_ime_prezime2.text = args.jmbg
-        sazetak_pod_vakcina.text = args.vrstaVakcine
+
+
+        val ime = "Ime: ${args.ime}"
+        val prezime = "Prezime: ${args.prezime}"
+        val datum_rodenja = "Datum rođenja: ${args.datumRodenja}"
+        val broj_tel = "Broj telefona: ${args.brojTelefona}"
+        val jmbg = "JMBG: ${args.jmbg}"
+        val vakcina = "Vakcina: ${args.vrstaVakcine}"
+
+        sazetak_podataka_ime_prezime.text = ime
+        sazetak_podataka_jmbg.text = prezime
+        sazetak_podataka_godine.text = datum_rodenja
+        sazetak_podataka_telefon.text = broj_tel
+        sazetak_podataka_ime_prezime2.text = jmbg
+        sazetak_pod_vakcina.text = vakcina
 
 
         goToTerminFromIzbor()

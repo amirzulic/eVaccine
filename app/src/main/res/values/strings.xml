@@ -16,8 +16,10 @@
     <string name="ime">Ime</string>
     <string name="prezime">Prezime</string>
     <string name="sazetak_pod_vakcina">Vrsta vakcine</string>
+    <string name="broj_vakcinisanih">7245</string>
     <string name="idi_na_pocetnu">Početna</string>
     <string name="dugme_izlaz">Izlaz</string>
+    <string name="dugmePodijeli">Podijeli</string>
     <string name="datum_rodjenja">Datum rođenja</string>
     <string name="jmbg">JMBG</string>
     <string name="br_telefona">Broj telefona</string>
@@ -52,4 +54,7 @@
     <string name="kontakt_tekst">Ukoliko imate nejasnoća u vezi korištenja aplikacije ili nekih drugih nejasnoća pozovite broj\n091111222\nTakođer možete nas posjetiti
     ukoliko je to neophodno ili zatraženo na adresi\nZmaja od Bosne 33-35 </string>
     <string name="kontakt">Kontakt</string>
+    <string name="vakcinisaniTrenutno">Trenutni broj vakcinisanih građana:</string>
+    <string name="pocetna_dugme_us">US</string>
+    <string name="pocetna_dugme_ba">BA</string>
 </resources>

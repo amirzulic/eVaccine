@@ -95,6 +95,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.521" />
+
+    <TextView
+        android:id="@+id/vakcinisani_trenutno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vakcinisaniTrenutno"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <TextView
+        android:id="@+id/termin_vakcinacije_broj_vakcinisanih"
+        android:layout_width="60dp"
+        android:layout_height="22dp"
+        android:text="@string/broj_vakcinisanih"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

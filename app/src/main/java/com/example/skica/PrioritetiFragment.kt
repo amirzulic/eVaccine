@@ -28,10 +28,9 @@ class PrioritetiFragment : Fragment(R.layout.prioriteti) {
         var prioritetnaGrupa = ""
 
         if (view is RadioButton) {
-            // Is the button now checked?
+
             val checked = view.isChecked
 
-            // Check which radio button was clicked
             when (view.getId()) {
                 R.id.prioriteti_medicinski_radnik ->
                     if (checked) {
@@ -59,7 +58,6 @@ class PrioritetiFragment : Fragment(R.layout.prioriteti) {
 
 
         prioriteti_dugme_dalje.setOnClickListener {
-            val textPrioritetna = prioritetnaGrupa
             val ime = args.ime
             val prezime = args.prezime
             val datum_rodenja = args.datumRodenja
@@ -69,7 +67,7 @@ class PrioritetiFragment : Fragment(R.layout.prioriteti) {
 
 
             val action = PrioritetiFragmentDirections.actionPrioritetiFragmentToIzborVakcineFragment(
-                textPrioritetna, ime, prezime, datum_rodenja, broj_tel, jmbg
+                ime, prezime, datum_rodenja, broj_tel, jmbg
             )
             findNavController().navigate(action)
         }

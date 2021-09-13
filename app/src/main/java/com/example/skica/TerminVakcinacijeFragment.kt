@@ -10,8 +10,11 @@ import androidx.navigation.fragment.findNavController
 import com.example.skica.databinding.KontaktBinding
 import com.example.skica.databinding.TerminVakcinacijeBinding
 import kotlinx.android.synthetic.main.termin_vakcinacije.*
+import java.util.*
 
 class TerminVakcinacijeFragment : Fragment(R.layout.termin_vakcinacije) {
+
+    var traje = true
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,6 +24,21 @@ class TerminVakcinacijeFragment : Fragment(R.layout.termin_vakcinacije) {
         postaviTermin()
         postaviLokaciju()
         goToKontaktFromTermin()
+
+        Timer().scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                if(traje) {
+                    var vakcinisani = termin_vakcinacije_broj_vakcinisanih.text.toString()
+                    var brojVakcinisanih = vakcinisani.toInt()
+                    brojVakcinisanih += 1
+                    termin_vakcinacije_broj_vakcinisanih.text = brojVakcinisanih.toString()
+                }
+                else{
+                    Timer().cancel()
+                    Timer().purge()
+                }
+            }
+        }, 4000, 1000)
 
     }
 
@@ -68,6 +86,7 @@ class TerminVakcinacijeFragment : Fragment(R.layout.termin_vakcinacije) {
 
     private fun goToKontaktFromTermin(){
         termin_vakcinacije_dugme_uredu.setOnClickListener {
+            traje = false
             val action = TerminVakcinacijeFragmentDirections.actionTerminVakcinacijeFragmentToKontaktFragment()
             findNavController().navigate(action)
 

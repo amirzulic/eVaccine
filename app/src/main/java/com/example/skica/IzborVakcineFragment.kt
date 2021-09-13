@@ -26,33 +26,32 @@ class IzborVakcineFragment : Fragment(R.layout.izbor_vakcine) {
 
         radioGroupVakcina.setOnCheckedChangeListener { group, checkedId ->
             if (checkedId == R.id.izbor_vakcine_sputnik) {
-                vakcina = R.id.izbor_vakcine_sputnik.toString()
+                vakcina = izbor_vakcine_sputnik.text.toString()
             }
             if(checkedId == R.id.izbor_vakcine_moderna) {
-                vakcina = R.id.izbor_vakcine_moderna.toString()
+                vakcina = izbor_vakcine_moderna.text.toString()
             }
             if(checkedId == R.id.izbor_vakcine_astra_zeneca) {
-                vakcina = R.id.izbor_vakcine_astra_zeneca.toString()
+                vakcina = izbor_vakcine_astra_zeneca.text.toString()
             }
             if(checkedId == R.id.izbor_vakcine_pfitzer) {
-                vakcina = R.id.izbor_vakcine_pfitzer.toString()
+                vakcina = izbor_vakcine_pfitzer.text.toString()
             }
 
         }
 
 
         izbor_vakcine_dugme_dalje.setOnClickListener {
-            val vrstaVakcine = vakcina
-            val textPrioritetna = args.prioritetnaGrupa
             val ime = args.ime
             val prezime = args.prezime
             val datum_rodenja = args.datumRodenja
             val broj_tel = args.brojTelefona
             val jmbg = args.jmbg
+            val vrstaVakcine = vakcina
 
 
             val action = IzborVakcineFragmentDirections.actionIzborVakcineFragmentToSazetakPodatakaFragment(
-                vrstaVakcine, textPrioritetna, ime, prezime, datum_rodenja, broj_tel, jmbg
+                ime, prezime, datum_rodenja, broj_tel, jmbg, vrstaVakcine
             )
             findNavController().navigate(action)
 
@@ -64,8 +63,7 @@ class IzborVakcineFragment : Fragment(R.layout.izbor_vakcine) {
 
 
 
-
-
+    
 
 
 

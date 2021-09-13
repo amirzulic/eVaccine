@@ -10,6 +10,32 @@
         android:layout_height="match_parent"
         android:background="#FFFFFF">
 
+        <Button
+            android:id="@+id/pocetna_dugme_us"
+            android:layout_width="@dimen/dugme_sirina_small"
+            android:layout_height="wrap_content"
+            android:text="@string/pocetna_dugme_us"
+            app:backgroundTint="#FF5722"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.584"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pocetna_dugme"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/pocetna_dugme_ba"
+            android:layout_width="@dimen/dugme_sirina_small"
+            android:layout_height="wrap_content"
+            android:text="@string/pocetna_dugme_ba"
+            app:backgroundTint="#FF5722"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.413"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pocetna_dugme"
+            app:layout_constraintVertical_bias="0.0" />
+
         <TextView
             android:id="@+id/pocetna_naslov"
             android:layout_width="wrap_content"

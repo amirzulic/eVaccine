@@ -31,12 +31,10 @@ class UnosPodatakaFragment : Fragment(R.layout.unos_podataka) {
             val jmbg = unos_podataka_jmbg.text.toString()
             val broj_tel = unos_podataka_telefon.text.toString()
 
-            val action = UnosPodatakaFragmentDirections.actionUnosPodatakaFragmentToPrioritetiFragment2(
+            val action =  UnosPodatakaFragmentDirections.actionUnosPodatakaFragmentToPrioritetiFragment2(
                 ime, prezime, datum_rodenja, jmbg, broj_tel
             )
             findNavController().navigate(action)
-
-
 
 
         }

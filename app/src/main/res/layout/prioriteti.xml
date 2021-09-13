@@ -31,10 +31,9 @@
         android:layout_height="363dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556">
+        app:layout_constraintTop_toBottomOf="@+id/prioriteti_naslov"
+        app:layout_constraintVertical_bias="0.116">
 
 
         <RadioButton
@@ -109,13 +108,14 @@
         android:id="@+id/prioriteti_dugme_dalje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="564dp"
         android:width="@dimen/dugme_sirina"
         android:text="@string/dalje"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.232" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
